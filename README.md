@@ -1,7 +1,7 @@
 # woodhack
 # Task
 3 class classification of woods. The WoodHack Hackathon from [NeuroWood](http://neuro-wood.com/).
-train: 578 png images of woods. 0 class has 69 images, 1'st class 299, 3rd class 210.(no second class)
+train: 578 png images of woods. 0 class has 69 images, 1'st class 299, 3rd class 210.(no second class) </br>
 Metic: accuracy
 # Framework used
 [pytorch lightning](https://www.pytorchlightning.ai/)
