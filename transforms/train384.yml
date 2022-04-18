@@ -1,0 +1,76 @@
+__version__: 1.0.3
+transform:
+  __class_fullname__: Compose
+  additional_targets: {}
+  bbox_params: null
+  keypoint_params: null
+  p: 1.0
+  transforms:
+  - __class_fullname__: Resize
+    always_apply: false
+    height: 400
+    interpolation: 1
+    p: 1
+    width: 400
+  - __class_fullname__: RandomCrop
+    always_apply: false
+    height: 384
+    p: 1.0
+    width: 384
+  - __class_fullname__: RandomBrightnessContrast
+    always_apply: false
+    brightness_by_max: true
+    brightness_limit:
+    - -0.25
+    - 0.25
+    contrast_limit:
+    - -0.25
+    - 0.25
+    p: 1
+  - __class_fullname__: HorizontalFlip
+    always_apply: false
+    p: 0.5
+  - __class_fullname__: ShiftScaleRotate
+    always_apply: false
+    border_mode: 4
+    interpolation: 1
+    mask_value: null
+    p: 0.9
+    rotate_limit:
+    - -15
+    - 15
+    scale_limit:
+    - -0.15000000000000002
+    - 0.1499999999999999
+    shift_limit_x:
+    - -0.1
+    - 0.1
+    shift_limit_y:
+    - -0.1
+    - 0.1
+    value: null
+  - __class_fullname__: OneOf
+    p: 0.5
+    transforms:
+    - __class_fullname__: Blur
+      always_apply: false
+      blur_limit:
+      - 3
+      - 7
+      p: 1.0
+    - __class_fullname__: MotionBlur
+      always_apply: false
+      blur_limit:
+      - 3
+      - 7
+      p: 0.5
+  - __class_fullname__: Cutout
+    always_apply: false
+    max_h_size: 35
+    max_w_size: 35
+    num_holes: 12
+    p: 0.5
+  - __class_fullname__: ToTensorV2
+    always_apply: true
+    p: 1.0
+    transpose_mask: false
