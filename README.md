@@ -43,5 +43,5 @@ return {
     ])
 }
 ```
-- **Test time augmentation**- I have used (ttach)(https://github.com/qubvel/ttach) for test time augmentation.
+- **Test time augmentation**- I have used [ttach](https://github.com/qubvel/ttach) for test time augmentation.
 
